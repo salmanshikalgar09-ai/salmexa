@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SALMEXA OTT</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#05080d">
+<meta name="mobile-web-app-capable" content="yes">
+<style>
+:root{--bg:#05080d;--panel:#0b1119;--panel2:#111923;--gold:#f5b52e;--text:#f7f7f7;--muted:#9ba6b4;--line:#1c2733}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#020408,#08111b);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+button{font:inherit}.app{min-height:100vh;display:flex;flex-direction:column}.top{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;border-bottom:1px solid var(--line);background:rgba(5,8,13,.92);position:sticky;top:0;z-index:5}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:3px;font-size:20px}.mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#ffbd32 0 45%,#3220a7 46% 67%,#121b27 68%);display:grid;place-items:center;box-shadow:0 0 22px #f5b52e55}.play{width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:11px solid white;margin-left:2px}.actions{display:flex;gap:12px}.icon{width:38px;height:38px;border:1px solid var(--line);background:#0c131d;color:#fff;border-radius:50%;cursor:pointer}.content{width:min(1180px,100%);margin:auto;padding:24px 20px 92px}.hero{min-height:390px;border-radius:24px;overflow:hidden;position:relative;background:radial-gradient(circle at 75% 30%,#4d3b25 0,#142334 28%,#081019 65%,#05080d 100%);display:flex;align-items:flex-end;padding:34px}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,5,8,.95),rgba(2,5,8,.55) 48%,rgba(2,5,8,.15)),linear-gradient(0deg,rgba(2,5,8,.9),transparent 55%)}.heroText{position:relative;z-index:1;max-width:550px}.eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:2px}.hero h1{font-size:46px;line-height:1;margin:10px 0}.hero p{color:#c8d0da;max-width:500px}.cta{background:var(--gold);border:0;border-radius:9px;padding:12px 20px;font-weight:800;cursor:pointer}.ghost{background:#16212d;color:#fff;border:1px solid #304050;border-radius:9px;padding:11px 18px;margin-left:8px;cursor:pointer}.section{margin-top:30px}.sectionHead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.section h2{margin:0;font-size:21px}.more{color:var(--gold);font-size:13px}.row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;transition:.2s}.card:hover{transform:translateY(-3px);border-color:#48596a}.poster{height:205px;background:linear-gradient(150deg,#25384b,#111722 52%,#4b3020);display:flex;align-items:flex-end;padding:12px;font-weight:900;font-size:18px}.p2{background:linear-gradient(150deg,#5a2831,#14151d 55%,#293c50)}.p3{background:linear-gradient(150deg,#182d54,#080d15 55%,#76502b)}.p4{background:linear-gradient(150deg,#203f32,#10151b 55%,#52372a)}.p5{background:linear-gradient(150deg,#4a234f,#10111a 55%,#183f56)}.meta{padding:10px 12px}.meta b{font-size:14px}.meta small{display:block;color:var(--muted);margin-top:4px}.bottom{position:fixed;bottom:0;left:0;right:0;height:66px;background:rgba(5,8,13,.96);border-top:1px solid var(--line);display:flex;justify-content:center;z-index:6}.nav{width:min(600px,100%);display:flex;justify-content:space-around;align-items:center}.nav button{background:none;border:0;color:#8f9aa7;cursor:pointer;font-size:12px}.nav button.active{color:var(--gold)}.screen{display:none}.screen.active{display:block}.searchBox{width:100%;background:#0c131d;border:1px solid var(--line);padding:15px 16px;border-radius:12px;color:white;outline:none}.profile{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}.profile h2{margin-top:0}.item{padding:15px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}.player{aspect-ratio:16/9;background:radial-gradient(circle at 60% 30%,#394f65,#070b11 65%);border-radius:18px;display:grid;place-items:center}.bigplay{width:72px;height:72px;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:#111;font-size:28px}
+@media(max-width:800px){.row{grid-template-columns:repeat(2,1fr)}.hero{min-height:360px}.hero h1{font-size:34px}.poster{height:190px}}@media(max-width:480px){.content{padding:16px 14px 90px}.hero{padding:24px;min-height:390px}.row{grid-template-columns:repeat(2,1fr);gap:10px}.poster{height:165px}.top{padding:0 14px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+  <div class="brand"><span class="mark"><span class="play"></span></span>SALMEXA</div>
+  <div class="actions"><button class="icon" onclick="show('search')">⌕</button><button class="icon" onclick="show('profile')">◯</button></div>
+</header>
+
+<main class="content">
+<section id="home" class="screen active">
+  <div class="hero"><div class="heroText"><div class="eyebrow">SALMEXA ORIGINAL</div><h1>The Last Journey</h1><p>When the road ends, the real journey begins. Discover stories made for your screen.</p><button class="cta" onclick="show('player')">▶ Watch Now</button><button class="ghost" onclick="show('movies')">+ My List</button></div></div>
+  <div class="section"><div class="sectionHead"><h2>Trending Now</h2><span class="more">See All →</span></div><div class="row">
+    <article class="card" onclick="show('player')"><div class="poster">THE LAST JOURNEY</div><div class="meta"><b>The Last Journey</b><small>Movie • 2026</small></div></article>
+    <article class="card"><div class="poster p2">RANG DE</div><div class="meta"><b>Rang De</b><small>Web Series • S1</small></div></article>
+    <article class="card"><div class="poster p3">CITY LIGHTS</div><div class="meta"><b>City Lights</b><small>Movie • Drama</small></div></article>
+    <article class="card"><div class="poster p4">BROKEN DREAM</div><div class="meta"><b>Broken Dream</b><small>Series • 2026</small></div></article>
+    <article class="card"><div class="poster p5">THE SIGNAL</div><div class="meta"><b>The Signal</b><small>Original • Thriller</small></div></article>
+  </div></div>
+  <div class="section"><div class="sectionHead"><h2>Continue Watching</h2><span class="more">See All →</span></div><div class="row">
+    <article class="card"><div class="poster p2">RANG DE</div><div class="meta"><b>Episode 3</b><small>18 min left</small></div></article>
+    <article class="card"><div class="poster p3">CITY LIGHTS</div><div class="meta"><b>1h 12m left</b><small>Continue watching</small></div></article>
+  </div></div>
+</section>
+
+<section id="movies" class="screen">
+  <div class="sectionHead"><h2>Movies</h2><span class="more">Latest • Popular</span></div>
+  <div class="row">
+    <article class="card" onclick="show('player')"><div class="poster">THE LAST JOURNEY</div><div class="meta"><b>The Last Journey</b><small>Action • 4K</small></div></article>
+    <article class="card"><div class="poster p2">RANG DE</div><div class="meta"><b>Rang De</b><small>Romance • HD</small></div></article>
+    <article class="card"><div class="poster p3">CITY LIGHTS</div><div class="meta"><b>City Lights</b><small>Drama • HD</small></div></article>
+    <article class="card"><div class="poster p4">BROKEN DREAM</div><div class="meta"><b>Broken Dream</b><small>Drama • HD</small></div></article>
+  </div>
+</section>
+
+<section id="search" class="screen">
+  <div class="sectionHead"><h2>Search</h2></div>
+  <input class="searchBox" placeholder="Search movies, series, actors...">
+  <div class="section"><h2>Trending Searches</h2><div class="profile">
+    <div class="item">Action movies <span>›</span></div><div class="item">Marathi movies <span>›</span></div><div class="item">Romantic series <span>›</span></div><div class="item">Web series <span>›</span></div>
+  </div></div>
+</section>
+
+<section id="profile" class="screen">
+  <div class="profile"><h2>My Profile</h2><p style="color:#9ba6b4">Salman • Premium Member</p>
+    <div class="item">My List <span>›</span></div><div class="item">Continue Watching <span>›</span></div><div class="item">Downloads <span>›</span></div><div class="item">Subscription <span>›</span></div><div class="item">Settings <span>›</span></div><div class="item">Help & Support <span>›</span></div>
+  </div>
+</section>
+
+<section id="player" class="screen">
+  <div class="player"><div class="bigplay">▶</div></div>
+  <div class="section"><h2>The Last Journey</h2><p style="color:#9ba6b4">Movie • 2026 • HD • 4K</p><p>A premium streaming player placeholder for the SALMEXA MVP. Real licensed video will connect here.</p></div>
+</section>
+</main>
+
+<footer class="bottom"><nav class="nav">
+<button class="active" onclick="show('home',this)">⌂<br>Home</button>
+<button onclick="show('movies',this)">▣<br>Movies</button>
+<button onclick="show('home',this)">▤<br>Series</button>
+<button onclick="show('search',this)">⌕<br>Search</button>
+<button onclick="show('profile',this)">◯<br>Profile</button>
+</nav></footer>
+</div>
+<script>
+function show(id,btn){
+ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
+ if(btn) btn.classList.add('active');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("./sw.js").catch(()=>{});}</script>
+</body>
+</html>
