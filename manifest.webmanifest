@@ -1,10 +1,23 @@
 {
-  "name":"SALMEXA OTT",
-  "short_name":"SALMEXA",
-  "start_url":"./index.html",
-  "display":"standalone",
-  "background_color":"#05080d",
-  "theme_color":"#05080d",
-  "orientation":"portrait",
-  "icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+  "name": "SALMEXA OTT",
+  "short_name": "SALMEXA",
+  "description": "SALMEXA is a modern OTT entertainment platform for movies and web series.",
+  "start_url": "/salmexa/",
+  "scope": "/salmexa/",
+  "display": "standalone",
+  "background_color": "#05080d",
+  "theme_color": "#05080d",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/salmexa/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/salmexa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
